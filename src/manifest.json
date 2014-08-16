@@ -1,0 +1,23 @@
+{
+	"manifest_version":2,
+	"name":"ニコニコ直ダウンローダー",
+	"description":"外部サーバーに頼らず、ファイル名を自動で付けてニコニコ動画を1クリックでダウンロードします。時報ブロック機能付き。",
+	"version": "4.3",
+	"options_page":"option.html",
+	"background":{"page":"background.html"},
+	"icons":{
+		"48":"icon48.png",
+		"128":"icon128.png"
+	},
+	"permissions": [
+		"contextMenus",
+		"webRequest",
+		"webRequestBlocking",
+		"http://*.nicovideo.jp/",
+		"http://res.nimg.jp/"
+	],
+	"content_scripts":[{
+		"matches":["http://*.nicovideo.jp/*"],
+		"js":["contentScript.js"]
+	}]
+}

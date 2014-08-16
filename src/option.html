@@ -1,0 +1,46 @@
+<html lang="ja">
+<meta charset="UTF-8" />
+<style>
+#bgDownload{
+	background-color:#DDD;
+	color:#999;
+}
+</style>
+<title>オプション</title>
+<script type="text/javascript" src="backgroundScript.js"></script>
+<script type="text/javascript" src="option.js"></script>
+</head>
+<body>
+<div id="signalDisable"><label><input type="checkbox">時報を無効化する</label><br><span class="msg">保存は自動で行います</span></div><hr>
+<div id="dlButton"><label><input type="checkbox">視聴ページ(/watch)にダウンロードボタンを表示する</label><br><span class="msg">保存は自動で行います</span></div><hr>
+<div id="contextMenu"><label><input type="checkbox">右クリックメニューに「ダウンロード」メニューを追加する</label><br><span class="msg">保存は自動で行います</span></div><hr>
+<div id="bgDownload"><label><input type="checkbox" disabled>保存時一瞬新しいタブが開くのを防止し、ダウンロードバーを非表示にします。中断は<a href="chrome://downloads/">chrome://downloads/</a>より。</label><br><span class="msg">chromeの仕様変更が落ち着くまで無効化(2012/09/22)</span></div><hr>
+<div id="saveFilePat">保存ファイル名<input type="text" id="saveFilePatT" style="font-family:monospace;width:500px;">
+<table border="1">
+<tr><td>$title</td>      <td>動画タイトル</td><td>ニコニコ</td></tr>
+<tr><td>$vid</td>        <td>動画ID</td><td>sm123</td></tr>
+<tr><td>$thread</td>     <td>スレッドID</td><td>1234567890</td></tr>
+<tr><td>$postYear</td>   <td>投稿した年</td><td>2043</td></tr>
+<tr><td>$postMonth</td>  <td>投稿した月</td><td>0～12</td></tr>
+<tr><td>$postMonth2</td> <td>投稿した月(2桁)</td><td>00～12</td></tr>
+<tr><td>$postDate</td>   <td>投稿した日</td><td>0～31</td></tr>
+<tr><td>$postDate2</td>  <td>投稿した日(2桁)</td><td>00～31</td></tr>
+<tr><td>$postDay</td>    <td>投稿した曜日</td><td>日～土</td></tr>
+<tr><td>$postDayEng</td> <td>投稿した曜日(英語)</td><td>Sun～Sat</td></tr>
+<tr><td>$postDayEng2</td><td>投稿した曜日(英語)</td><td>Sunday～Saturday</td></tr>
+<tr><td>$postHour</td>   <td>投稿した時</td><td>0～59</td></tr>
+<tr><td>$postHour2</td>  <td>投稿した時(2桁)</td><td>00～59</td></tr>
+<tr><td>$postMin</td>    <td>投稿した分</td><td>0～59</td></tr>
+<tr><td>$postMin2</td>   <td>投稿した分(2桁)</td><td>00～59</td></tr>
+<tr><td>$postSec</td>    <td>投稿した秒</td><td>0～59</td></tr>
+<tr><td>$postSec2</td>   <td>投稿した秒(2桁)</td><td>00～59</td></tr>
+<tr><td>$postUser</td>   <td>投稿者名、又はチャンネル名</td><td>ニコニコ</td></tr>
+<tr><td>$postUserId</td> <td>投稿者ID、又はチャンネルID</td><td>123456、<a href="http://ch.nicovideo.jp/channel/ch1131" target="_blank">ch1131</a></td></tr>
+<tr><td>$category</td>   <td>カテゴリ</td><td>エンターテイメント</td></tr>
+<tr><td>$description</td><td>動画説明文</td><td>カブトボーグ メダロット配信中 ch1131</td></tr>
+<tr><td>$tags|</td>      <td>タグ名</td><td>$tags-|の場合、タグ1-タグ2-タグ3となる。<br>[$tags,|]と指定すれば[タグ1,タグ2,タグ3]</td></tr>
+</table>
+改行、タブ文字、htmlコードは削除。連続した空白文字(半角スペース、全角スペース)は一つに纏められます。<br>
+<span class="msg">保存は自動で行います</span></div><hr>
+</body>
+</html>
